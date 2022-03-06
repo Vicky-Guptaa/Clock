@@ -632,3 +632,11 @@ body{
     height: 100vh;
     min-height: 36rem;
 }
+
+.p-2{
+  padding: 1rem;
+}
+.button{
+  top:2rem;
+  right: 10%;
+}
