@@ -1,87 +1,142 @@
 <!DOCTYPE html>
+
+<!-- Changing The Text Size For Better Experience In Different Screen Size -->
 <html lang="en" class="text-[70%] sm:text-[80%] md:text-[90%] lg:text-[100%]">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome Cdjns -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Favicon Added -->
   <link rel="shortcut icon" href="assets/Images/wall-clock.png" type="image/x-icon">
+
+  <!-- Style Sheet Css -->
+  <link rel="stylesheet" href="assets/index.83ccdd14.css">
+
+  <!-- Js  -->
   <script src="javascript/digitalClock.js" defer></script>
   <script src="javascript/analogueClock.js" defer></script>
   <script src="javascript/themChange.js" defer></script>
+
+
   <title>Clock</title>
-  <link rel="stylesheet" href="assets/index.83ccdd14.css">
+
 </head>
 
 <body class="flex justify-center items-center bg-dark-bg">
+
+  <!-- Container For All Elements -->
   <div class="container-all w-full flex flex-col space-y-24 justify-center items-center font-sans mt-10 relative">
+
+    <!-- Button For Theme Change -->
     <button class="button absolute">
       <section
         class="switch-theme  w-12 aspect-square  flex justify-center items-center rounded-full shadow-inset-shad ">
         <i class="fa-solid fa-moon text-primary-accent text-2xl hover:scale-125 duration-500 ease-in-out"></i>
       </section>
     </button>
+
+    <!-- All About Analogue Clock Contents -->
     <main
       class="w-1/3 min-w-[16rem] max-w-[22rem] rounded-full font-semibold text-grey-tick bg-dark-bg border-sm border-dark-bd shadow-inset-shad md:p-0.5 aspect-square ">
+
+      <!-- Wrapper For The clock Content To Fix The Issue Of The Safari -->
       <div class="w-full aspect-square">
+
         <section class="clock-contents w-full h-full overflow-hidden relative ">
+
+          <!-- Hands Container -->
           <div class="hands-container custom-format">
+
+            <!-- Hands Container Wrapper -->
             <div class="hands relative w-full h-full">
+
+              <!-- For Center Dot In The Clock -->
               <div class="center-dot custom-format flex justify-center items-center z-30">
                 <span class="w-4 h-4 bg-primary-accent rounded-full border-2 border-dark-bg"></span>
               </div>
+
+              <!-- Second Hand -->
               <div class="second z-20 custom-format flex justify-center items-center">
                 <span class=" h-[46%] w-1 bg-primary-accent -translate-y-1/3 origin-[50%_83%] rounded-sm"></span>
               </div>
+
+              <!-- Minute Hand  -->
               <div class="minute z-10 custom-format flex justify-center items-center">
                 <span class=" h-[35%] w-1.5 bg-light-bg -translate-y-1/2 origin-bottom rounded-md"></span>
               </div>
+
+              <!-- Hour Hand -->
               <div class="hour z-4  custom-format flex justify-center items-center">
                 <span class=" h-[28%] w-1.5 bg-light-bg -translate-y-1/2 origin-bottom rounded-md"></span>
               </div>
             </div>
           </div>
+
+          <!-- Number Container OF The Clock -->
           <div class="numbers-container custom-format">
+
+            <!-- Wrapper -->
             <div class="number relative text-center w-full h-full text-sm">
+
               <div class="custom-format rotate-30">|</div>
               <div class="custom-format rotate-60">|</div>
               <div class="custom-format rotate-90">
                 <p class="-rotate-90 text-3xl">3</p>
               </div>
+
               <div class="custom-format rotate-120">|</div>
               <div class="custom-format rotate-150">|</div>
               <div class="custom-format rotate-180">
                 <p class=" text-3xl rotate-180">6</p>
               </div>
+
               <div class="custom-format -rotate-150">|</div>
               <div class="custom-format -rotate-120">|</div>
               <div class="custom-format -rotate-90">
                 <p class="rotate-90 text-3xl">9</p>
               </div>
+
               <div class="custom-format -rotate-60">|</div>
               <div class="custom-format -rotate-30">|</div>
               <div class="custom-format">
                 <p class=" text-3xl">12</p>
               </div>
+
             </div>
+
           </div>
         </section>
       </div>
     </main>
+
+    <!-- Its About The Digital Clock Contents -->
     <footer>
+
+      <!-- Wrapper -->
       <div
         class="container flex flex-col justify-center items-center space-y-2 font-semibold hover:scale-110 duration-500 ease-in-out">
+
+        <!-- For Time And Am Pm  -->
         <div class="digital-time relative text-light-bg">
           <div class="ampm absolute -right-5 -top-3.5 text-primary-accent">
             <span class=" ">AM</span>
           </div>
           <span class="time text-7xl">12:47</span>
         </div>
+
+        <!-- For Date -->
         <div class="date text-primary-accent"><span>4 Mar, 2022</span></div>
+
       </div>
+
     </footer>
   </div>
 </body>

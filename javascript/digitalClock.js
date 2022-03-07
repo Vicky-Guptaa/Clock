@@ -1,7 +1,13 @@
+/* Logic For Digital Clock */
+
+// Selecting different div for changes 
 let time = document.querySelector(".time");
 let ampm = document.querySelector(".ampm");
 let dmy = document.querySelector(".date");
+
+
 function setDigitalClock() {
+    // Date Will Give The Required Data
     const today = new Date();
     let hour = today.getHours();
     let minutes = today.getMinutes();
@@ -11,17 +17,26 @@ function setDigitalClock() {
     let year = today.getFullYear();
 
     setAmpm(hour);
+
+    // for 12 hour format
     hour %= 12;
-    if(hour==0)hour=12;
+
+    // to avoid showing 00 we show 12 
+    if (hour == 0) hour = 12;
+
     hour = appendZeroIfLengthOne(hour);
     minutes = appendZeroIfLengthOne(minutes);
+
     time.textContent = `${hour}:${minutes}`;
 
     month = getMonthName(month);
+
     dmy.textContent = `${date} ${month}, ${year}`;
+    
     setTimeout(setDigitalClock, 1000)
 }
 
+// Changing Months With Month Prefix
 function getMonthName(month) {
     switch (month) {
         case 1: return "Jan";
@@ -40,6 +55,7 @@ function getMonthName(month) {
     }
 }
 
+// Used To Append Zero If The Hour Or Minutes Are Single Digit Ex 1-9
 function appendZeroIfLengthOne(num) {
     if (num > 9) {
         num = num.toString();
@@ -49,6 +65,7 @@ function appendZeroIfLengthOne(num) {
     return num;
 }
 
+// Setting Am Pm Of The Clock
 function setAmpm(hour) {
     if (hour > 12)
         ampm.textContent = 'PM';

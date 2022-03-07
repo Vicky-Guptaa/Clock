@@ -628,15 +628,17 @@ video {
   }
 }
 
-body{
-    height: 100vh;
-    min-height: 36rem;
+/* Added Manually Not Tailwind */
+
+body {
+  height: 100vh;
+  min-height: 36rem;
 }
 
-.p-2{
+.p-2 {
   padding: 1rem;
 }
-.button{
-  top:2rem;
+.button {
+  top: 2rem;
   right: 10%;
 }
