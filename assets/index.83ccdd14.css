@@ -641,4 +641,5 @@ body {
 .button {
   top: 2rem;
   right: 10%;
+  -webkit-tap-highlight-color: transparent;
 }
