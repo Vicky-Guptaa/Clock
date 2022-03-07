@@ -32,7 +32,7 @@ function setDigitalClock() {
     month = getMonthName(month);
 
     dmy.textContent = `${date} ${month}, ${year}`;
-    
+
     setTimeout(setDigitalClock, 1000)
 }
 
@@ -67,7 +67,7 @@ function appendZeroIfLengthOne(num) {
 
 // Setting Am Pm Of The Clock
 function setAmpm(hour) {
-    if (hour > 12)
+    if (hour >= 12)
         ampm.textContent = 'PM';
     else
         ampm.textContent = 'AM';
